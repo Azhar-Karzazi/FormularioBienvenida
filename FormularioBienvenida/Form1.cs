@@ -50,5 +50,10 @@ namespace FormularioBienvenida
 
             lblResultado.Text = $"Hola, {nombre}. Tienes {edad} años.";
         }
+
+        private void lblCurso_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

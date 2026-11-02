@@ -91,11 +91,13 @@
             // lblCurso
             // 
             lblCurso.AutoSize = true;
+            lblCurso.ForeColor = SystemColors.ActiveCaption;
             lblCurso.Location = new Point(142, 177);
             lblCurso.Name = "lblCurso";
             lblCurso.Size = new Size(166, 15);
             lblCurso.TabIndex = 9;
             lblCurso.Text = "Desarrollo de Interfaces · DAM";
+            lblCurso.Click += lblCurso_Click;
             // 
             // frmPrincipal
             // 
