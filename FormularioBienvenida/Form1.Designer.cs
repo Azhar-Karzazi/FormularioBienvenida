@@ -94,9 +94,9 @@
             lblCurso.ForeColor = SystemColors.ActiveCaption;
             lblCurso.Location = new Point(142, 177);
             lblCurso.Name = "lblCurso";
-            lblCurso.Size = new Size(166, 15);
+            lblCurso.Size = new Size(186, 15);
             lblCurso.TabIndex = 9;
-            lblCurso.Text = "Desarrollo de Interfaces · DAM";
+            lblCurso.Text = "Desarrollo de Interfaces – 2.º DAM";
             lblCurso.Click += lblCurso_Click;
             // 
             // frmPrincipal
