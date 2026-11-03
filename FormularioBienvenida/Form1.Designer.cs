@@ -35,6 +35,8 @@
             btnAceptar = new Button();
             lblResultado = new Label();
             lblCurso = new Label();
+            btnLimpiar = new Button();
+            lblEdadValidacion = new Label();
             SuspendLayout();
             // 
             // lblNombre
@@ -50,15 +52,20 @@
             // 
             txtNombre.Location = new Point(30, 38);
             txtNombre.Name = "txtNombre";
+            txtNombre.PlaceholderText = "nombre";
             txtNombre.Size = new Size(100, 23);
             txtNombre.TabIndex = 4;
             // 
             // txtEdad
             // 
+            txtEdad.AccessibleName = "";
             txtEdad.Location = new Point(187, 38);
             txtEdad.Name = "txtEdad";
+            txtEdad.PlaceholderText = "mayores de edad";
             txtEdad.Size = new Size(100, 23);
             txtEdad.TabIndex = 5;
+            txtEdad.Tag = "";
+            txtEdad.TextChanged += txtEdad_TextChanged;
             // 
             // lblEdad
             // 
@@ -92,18 +99,38 @@
             // 
             lblCurso.AutoSize = true;
             lblCurso.ForeColor = SystemColors.ActiveCaption;
-            lblCurso.Location = new Point(142, 177);
+            lblCurso.Location = new Point(131, 177);
             lblCurso.Name = "lblCurso";
             lblCurso.Size = new Size(186, 15);
             lblCurso.TabIndex = 9;
             lblCurso.Text = "Desarrollo de Interfaces – 2.º DAM";
             lblCurso.Click += lblCurso_Click;
             // 
+            // btnLimpiar
+            // 
+            btnLimpiar.Location = new Point(212, 111);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(75, 23);
+            btnLimpiar.TabIndex = 10;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
+            // 
+            // lblEdadValidacion
+            // 
+            lblEdadValidacion.AutoSize = true;
+            lblEdadValidacion.Location = new Point(165, 64);
+            lblEdadValidacion.Name = "lblEdadValidacion";
+            lblEdadValidacion.Size = new Size(0, 15);
+            lblEdadValidacion.TabIndex = 11;
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(320, 201);
+            Controls.Add(lblEdadValidacion);
+            Controls.Add(btnLimpiar);
             Controls.Add(lblCurso);
             Controls.Add(lblResultado);
             Controls.Add(btnAceptar);
@@ -127,5 +154,7 @@
         private Button btnAceptar;
         private Label lblResultado;
         private Label lblCurso;
+        private Button btnLimpiar;
+        private Label lblEdadValidacion;
     }
 }

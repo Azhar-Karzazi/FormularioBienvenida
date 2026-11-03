@@ -42,16 +42,35 @@ namespace FormularioBienvenida
                 return;
             }
 
-            if (!int.TryParse(textoEdad, out int edad) || edad < 0)
+            if (!int.TryParse(textoEdad, out int edad) || edad < 18)
             {
-                MessageBox.Show("Introduce una edad válida.");
-                return;
-            }
+                if (edad < 18)
+                {
+                    MessageBox.Show("Debes ser mayor de edad para continuar.");
+                    return;
 
-            lblResultado.Text = $"Hola, {nombre}. Tienes {edad} años.";
+                }
+                else
+                {
+                    MessageBox.Show("Introduce una edad válida.");
+                    return;
+                }
+            }
+            lblResultado.Text = $"Hola, {nombre}.\n Tienes {edad} años.";
         }
 
         private void lblCurso_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombre.Clear();
+            txtEdad.Clear();
+        }
+
+        private void txtEdad_TextChanged(object sender, EventArgs e)
         {
 
         }
